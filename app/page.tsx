@@ -186,7 +186,7 @@ export default function HomePage() {
                 <div className="relative w-full max-w-md aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-[#1f3d30] group bg-[#f0f7f4] dark:bg-[#183126] flex items-center justify-center p-6">
                   <div className="absolute inset-0 overflow-hidden">
                     <video
-                      src="/assets/videos/eating.mp4"
+                      src="/assets/videos/combo_gift_box.mp4"
                       autoPlay
                       loop
                       muted
@@ -530,7 +530,7 @@ export default function HomePage() {
           {/* Background Video */}
           <div className="absolute inset-0 z-0 bg-[#000000]">
             <video
-              src="/assets/videos/combo_gift_box.mp4"
+              src="/assets/videos/eating.mp4"
               autoPlay
               loop
               muted
