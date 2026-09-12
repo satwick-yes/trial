@@ -83,12 +83,12 @@ function ShopContent() {
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#1b4332] text-white p-8 sm:p-12 mb-10 shadow-xl border border-[#2d6a4f]/40">
           <div className="absolute inset-0 z-0 bg-[#000000]">
             <video
-              src="/assets/videos/roasting.mp4"
+              src="/assets/videos/Spices_and_seeds_drifting_on_20260912134828.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover opacity-30 pointer-events-none"
+              className="w-full h-full object-cover opacity-30 scale-[1.15] origin-top-left pointer-events-none"
             />
           </div>
           <div className="relative z-10 max-w-2xl space-y-4">

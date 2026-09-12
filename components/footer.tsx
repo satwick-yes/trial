@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   Phone,
   Mail,
@@ -22,7 +23,13 @@ import { BRAND_INFO, CATEGORIES } from "@/lib/gustosa-data";
 
 export function Footer() {
   return (
-    <footer className="bg-[#111a16] text-[#f4ede4] border-t border-[#2d443b] relative overflow-hidden">
+    <motion.footer 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="bg-[#111a16] text-[#f4ede4] border-t border-[#2d443b] relative overflow-hidden"
+    >
       {/* Decorative Brand Background Glow */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#2d6a4f]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -301,6 +308,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }

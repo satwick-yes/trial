@@ -42,12 +42,12 @@ export default function ComboProductsPage() {
           {/* Background Video */}
           <div className="absolute inset-0 z-0 bg-[#000000]">
             <video
-              src="/assets/videos/combo_gift_box.mp4"
+              src="/assets/videos/Fox_nuts_tumbling_into_dish_20260912134837.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover opacity-60 scale-[1.3] pointer-events-none"
+              className="w-full h-full object-cover opacity-60 scale-[1.35] origin-top-left pointer-events-none"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-[#1b4332]/90 to-transparent z-0" />

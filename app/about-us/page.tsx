@@ -104,22 +104,44 @@ export default function AboutUsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white dark:bg-[#112019] p-8 rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] card-hover-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#e8f5e9] dark:bg-[#183126] text-[#1b4332] dark:text-[#52b788] flex items-center justify-center">
+            <div className="relative bg-white dark:bg-[#112019] p-8 rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] card-hover-shadow space-y-4 overflow-hidden group">
+              <div className="absolute inset-0 bg-[#000000] z-0">
+                <video
+                  src="/assets/videos/roasting.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover scale-[1.35] opacity-40 group-hover:scale-[1.45] origin-top-left transition-transform duration-700 pointer-events-none"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1b4332]/90 to-[#1b4332]/40 z-0" />
+              <div className="relative z-10 w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center shadow-md">
                 <Leaf className="w-6 h-6" />
               </div>
-              <h4 className="font-extrabold text-lg text-foreground">Clean Label Promise</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <h4 className="relative z-10 font-extrabold text-lg text-white drop-shadow-md">Clean Label Promise</h4>
+              <p className="relative z-10 text-xs text-white/90 leading-relaxed font-medium drop-shadow-sm">
                 No hidden chemicals, no artificial food colorings, and no palm oil. Only genuine spices, cold-pressed oils, and farm-fresh ingredients.
               </p>
             </div>
 
-            <div className="bg-white dark:bg-[#112019] p-8 rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] card-hover-shadow space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#e8f5e9] dark:bg-[#183126] text-[#1b4332] dark:text-[#52b788] flex items-center justify-center">
+            <div className="relative bg-white dark:bg-[#112019] p-8 rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] card-hover-shadow space-y-4 overflow-hidden group">
+              <div className="absolute inset-0 bg-[#000000] z-0">
+                <video
+                  src="/assets/videos/Hands_lifting_raw_lotus_seeds_20260912134831.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover scale-[1.35] opacity-40 group-hover:scale-[1.45] origin-top-left transition-transform duration-700 pointer-events-none"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1b4332]/90 to-[#1b4332]/40 z-0" />
+              <div className="relative z-10 w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center shadow-md">
                 <Users className="w-6 h-6" />
               </div>
-              <h4 className="font-extrabold text-lg text-foreground">Farmer First Sourcing</h4>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <h4 className="relative z-10 font-extrabold text-lg text-white drop-shadow-md">Farmer First Sourcing</h4>
+              <p className="relative z-10 text-xs text-white/90 leading-relaxed font-medium drop-shadow-sm">
                 By purchasing directly from traditional harvesting families in Bihar, we ensure fair wages, sustainable wetland ecology, and community growth.
               </p>
             </div>
@@ -137,17 +159,29 @@ export default function AboutUsPage() {
         </div>
 
         {/* CTA Banner */}
-        <div className="rounded-3xl bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#1b4332] text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6 border border-[#2d6a4f]/40 shadow-xl">
-          <div className="space-y-2 text-center md:text-left">
-            <h3 className="text-2xl font-extrabold">Ready to Experience Pure Snacking?</h3>
-            <p className="text-xs sm:text-sm text-white/85">
+        <div className="relative rounded-3xl overflow-hidden text-white p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl border border-[#2d6a4f]/40 min-h-[200px]">
+          <div className="absolute inset-0 z-0 bg-[#000000]">
+            <video
+              src="/assets/videos/eating.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover opacity-60 scale-[1.35] origin-top-left pointer-events-none"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1b4332]/90 to-[#1b4332]/40 z-0" />
+          
+          <div className="relative z-10 space-y-2 text-center md:text-left">
+            <h3 className="text-2xl font-extrabold drop-shadow-md">Ready to Experience Pure Snacking?</h3>
+            <p className="text-xs sm:text-sm text-white/90 drop-shadow-sm font-medium">
               Browse our complete catalog of crunch-packed roasted makhana flavors.
             </p>
           </div>
 
           <Link
             href="/shop"
-            className="bg-[#52b788] hover:bg-[#40916c] text-[#081c15] font-black px-6 py-3.5 rounded-2xl text-xs transition-all flex items-center gap-2 shrink-0 shadow-md"
+            className="relative z-10 bg-[#52b788] hover:bg-[#40916c] text-[#081c15] font-black px-6 py-3.5 rounded-2xl text-xs transition-all flex items-center gap-2 shrink-0 shadow-md"
           >
             <span>Explore All Flavors</span>
             <ArrowRight className="w-4 h-4" />

@@ -65,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plusJakarta.variable} font-sans antialiased min-h-screen flex flex-col`}>
+      <body className={`${plusJakarta.variable} font-sans antialiased min-h-screen flex flex-col overflow-x-hidden`}>
         <CartProvider>
           <ClickSpark
             sparkColor="#2d6a4f"
