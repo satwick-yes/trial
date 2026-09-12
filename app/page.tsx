@@ -154,7 +154,7 @@ export default function HomePage() {
               {/* Right Column: Hero Visual Product with Floating Interactive Badges */}
               <div className="lg:col-span-5 relative flex justify-center items-center py-6">
                 {/* Floating Parallax Badges */}
-                <div className="absolute -top-4 left-4 z-20 animate-float bg-white/95 dark:bg-[#183126]/95 backdrop-blur-md border border-[#1b4332]/20 dark:border-[#52b788]/30 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-2.5">
+                <div className="absolute -top-4 left-4 z-20 hidden md:flex animate-float bg-white/95 dark:bg-[#183126]/95 backdrop-blur-md border border-[#1b4332]/20 dark:border-[#52b788]/30 px-4 py-2.5 rounded-2xl shadow-xl items-center gap-2.5">
                   <div className="w-8 h-8 rounded-xl bg-[#e8f5e9] dark:bg-[#112019] flex items-center justify-center text-[#1b4332] dark:text-[#52b788]">
                     <Zap className="w-4 h-4" />
                   </div>
@@ -168,7 +168,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="absolute -bottom-4 right-4 z-20 animate-float-reverse bg-white/95 dark:bg-[#183126]/95 backdrop-blur-md border border-[#1b4332]/20 dark:border-[#52b788]/30 px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-2.5">
+                <div className="absolute -bottom-4 right-4 z-20 hidden md:flex animate-float-reverse bg-white/95 dark:bg-[#183126]/95 backdrop-blur-md border border-[#1b4332]/20 dark:border-[#52b788]/30 px-4 py-2.5 rounded-2xl shadow-xl items-center gap-2.5">
                   <div className="w-8 h-8 rounded-xl bg-[#e8f5e9] dark:bg-[#112019] flex items-center justify-center text-[#1b4332] dark:text-[#52b788]">
                     <Sparkles className="w-4 h-4" />
                   </div>
@@ -575,7 +575,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Combo Product Previews */}
-            <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {comboPacks.slice(0, 2).map((combo) => (
                 <div
                   key={combo.id}
