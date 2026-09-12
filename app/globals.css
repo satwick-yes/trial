@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --radius: 0.85rem;
+
+  /* Strict White & Emerald Green Palette */
+  --background: #fbfdfc;
+  --foreground: #0f241d;
+  --card: #ffffff;
+  --card-foreground: #0f241d;
+  --popover: #ffffff;
+  --popover-foreground: #0f241d;
+
+  /* Deep Forest Emerald Green (Primary) */
+  --primary: #1b4332;
+  --primary-foreground: #ffffff;
+
+  /* Fresh Organic Mint Green (Secondary) */
+  --secondary: #e8f5e9;
+  --secondary-foreground: #1b4332;
+
+  /* Muted Sage / Clean Light Green */
+  --muted: #f0f7f4;
+  --muted-foreground: #406356;
+
+  /* Bright Vibrant Green (Accent) */
+  --accent: #2d6a4f;
+  --accent-foreground: #ffffff;
+
+  --destructive: #b91c1c;
+  --destructive-foreground: #ffffff;
+
+  /* Subtle Green-Tinted White Borders */
+  --border: #d8e6df;
+  --input: #d8e6df;
+  --ring: #2d6a4f;
+}
+
+.dark {
+  --background: #0b1410;
+  --foreground: #e8f5e9;
+  --card: #112019;
+  --card-foreground: #e8f5e9;
+  --popover: #112019;
+  --popover-foreground: #e8f5e9;
+
+  --primary: #52b788;
+  --primary-foreground: #081c15;
+
+  --secondary: #183126;
+  --secondary-foreground: #d8f3dc;
+
+  --muted: #14261e;
+  --muted-foreground: #749c8c;
+
+  --accent: #40916c;
+  --accent-foreground: #ffffff;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  --border: #1f3d30;
+  --input: #1f3d30;
+  --ring: #52b788;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  overflow-x: hidden;
+}
+
+/* Custom UI Polish & Animations */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.dark .glassmorphism {
+  background: rgba(17, 32, 25, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at 50% 20%, rgba(82, 183, 136, 0.18) 0%, rgba(251, 253, 252, 0) 70%);
+}
+
+.card-hover-shadow {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px -8px rgba(27, 67, 50, 0.12), 0 10px 15px -5px rgba(27, 67, 50, 0.05);
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Floating Animation */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-2deg); }
+}
+
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 7s ease-in-out infinite;
+}
+
+/* Pulse Glow Animation */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.08); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
