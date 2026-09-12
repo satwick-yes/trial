@@ -47,12 +47,16 @@ export default function AboutUsPage() {
         {/* Story Section with Visuals */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl border border-[#d8e6df] dark:border-[#1f3d30]">
-            <Image
-              src="/assets/banners/makhana_harvest.jpg"
-              alt="Mithila Bihar Makhana Harvest"
-              fill
-              className="object-cover"
-            />
+            <div className="absolute inset-0 overflow-hidden">
+              <video
+                src="/assets/videos/harvesting.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover scale-[1.3] pointer-events-none"
+              />
+            </div>
           </div>
 
           <div className="space-y-6">

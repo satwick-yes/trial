@@ -184,13 +184,16 @@ export default function HomePage() {
 
                 {/* Hero Showcase Center Card */}
                 <div className="relative w-full max-w-md aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white dark:border-[#1f3d30] group bg-[#f0f7f4] dark:bg-[#183126] flex items-center justify-center p-6">
-                  <Image
-                    src="/assets/products/makhana-combo-6.jpg"
-                    alt="Gustosa Foods Premium Roasted Makhana"
-                    fill
-                    priority
-                    className="object-contain p-6 transition-transform duration-700 group-hover:scale-108"
-                  />
+                  <div className="absolute inset-0 overflow-hidden">
+                    <video
+                      src="/assets/videos/eating.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover scale-[1.3] pointer-events-none"
+                    />
+                  </div>
 
                   {/* Floating Action Strip */}
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 dark:bg-[#112019]/90 backdrop-blur-md border border-white/60 dark:border-white/10 shadow-lg flex items-center justify-between">
@@ -458,19 +461,31 @@ export default function HomePage() {
           </div>
 
           {/* Bento Card 2 */}
-          <div className="rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] bg-gradient-to-br from-[#d8f3dc]/40 to-white dark:from-[#183126] dark:to-[#112019] p-8 flex flex-col justify-between space-y-6 shadow-sm card-hover-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-[#2d6a4f] text-white flex items-center justify-center shadow-md">
+          <div className="relative rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] p-8 flex flex-col justify-between space-y-6 shadow-sm card-hover-shadow overflow-hidden group">
+            <div className="absolute inset-0 bg-[#000000]">
+              <video
+                src="/assets/videos/roasting.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover scale-[1.3] opacity-40 group-hover:scale-[1.4] transition-transform duration-700 pointer-events-none"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1b4332]/90 to-transparent z-0" />
+            
+            <div className="relative z-10 w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center shadow-md">
               <Flame className="w-7 h-7" />
             </div>
-            <div className="space-y-2">
-              <h3 className="text-xl font-black text-[#0f241d] dark:text-[#e8f5e9]">
+            <div className="relative z-10 space-y-2">
+              <h3 className="text-xl font-black text-white drop-shadow-md">
                 Slow-Roasted in Pure Olive Oil
               </h3>
-              <p className="text-xs sm:text-sm text-[#406356] dark:text-[#749c8c] leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-medium drop-shadow-sm">
                 Never fried in cheap palm oil or refined cottonseed blends. We gently roast our makhana in heart-healthy olive oil to preserve vital micronutrients.
               </p>
             </div>
-            <div className="text-xs font-black text-[#1b4332] dark:text-[#52b788] flex items-center gap-1.5">
+            <div className="relative z-10 text-xs font-black text-[#52b788] flex items-center gap-1.5 drop-shadow-md">
               <span>0% Trans Fat &amp; Zero Cholesterol</span>
               <Check className="w-4 h-4" />
             </div>

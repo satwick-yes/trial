@@ -38,17 +38,30 @@ export default function ComboProductsPage() {
         </div>
 
         {/* Hero Section */}
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#1b4332] text-white p-8 sm:p-14 shadow-xl border border-[#2d6a4f]/40">
+        <div className="relative rounded-3xl overflow-hidden text-white p-8 sm:p-14 shadow-xl border border-[#2d6a4f]/40 min-h-[320px] flex items-center">
+          {/* Background Video */}
+          <div className="absolute inset-0 z-0 bg-[#000000]">
+            <video
+              src="/assets/videos/combo_gift_box.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover opacity-60 scale-[1.3] pointer-events-none"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1b4332]/90 to-transparent z-0" />
+          
           <div className="relative z-10 max-w-2xl space-y-4">
             <div className="inline-flex items-center gap-2 bg-[#52b788] text-[#081c15] px-3.5 py-1.5 rounded-full text-xs font-black uppercase tracking-wider shadow-sm">
               <Gift className="w-3.5 h-3.5" />
               <span>Huge Savings • Save Up to 25%</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-md">
               Curated Combo Packs &amp; <br />
-              <span className="text-[#52b788]">Multi-Flavor Variety Boxes</span>
+              <span className="text-[#52b788] drop-shadow-md">Multi-Flavor Variety Boxes</span>
             </h1>
-            <p className="text-sm sm:text-base text-white/85 max-w-xl leading-relaxed">
+            <p className="text-sm sm:text-base text-white/90 max-w-xl leading-relaxed drop-shadow-sm font-medium">
               Why stick to one flavor when you can taste them all? Experience our handcrafted assortment bundles featuring Peri Peri, Pudina, Cream &amp; Onion, and Himalayan Salt at unbeatable combo prices.
             </p>
           </div>
