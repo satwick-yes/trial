@@ -442,19 +442,31 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Bento Card 1 */}
-          <div className="rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] bg-gradient-to-br from-[#e8f5e9]/50 to-white dark:from-[#183126] dark:to-[#112019] p-8 flex flex-col justify-between space-y-6 shadow-sm card-hover-shadow">
-            <div className="w-14 h-14 rounded-2xl bg-[#1b4332] text-white flex items-center justify-center shadow-md">
+          <div className="relative rounded-3xl border border-[#d8e6df] dark:border-[#1f3d30] p-8 flex flex-col justify-between space-y-6 shadow-sm card-hover-shadow overflow-hidden group">
+            <div className="absolute inset-0 bg-[#000000]">
+              <video
+                src="/assets/videos/harvesting.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover scale-[1.3] opacity-40 group-hover:scale-[1.4] transition-transform duration-700 pointer-events-none"
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1b4332]/90 to-transparent z-0" />
+            
+            <div className="relative z-10 w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md text-white flex items-center justify-center shadow-md">
               <Leaf className="w-7 h-7" />
             </div>
-            <div className="space-y-2">
-              <h3 className="text-xl font-black text-[#0f241d] dark:text-[#e8f5e9]">
+            <div className="relative z-10 space-y-2">
+              <h3 className="text-xl font-black text-white drop-shadow-md">
                 Direct From Mithila Generational Farmers
               </h3>
-              <p className="text-xs sm:text-sm text-[#406356] dark:text-[#749c8c] leading-relaxed font-medium">
+              <p className="text-xs sm:text-sm text-white/90 leading-relaxed font-medium drop-shadow-sm">
                 Over 90% of the world&apos;s finest lotus seeds originate in Bihar. We partner directly with local farming cooperatives to harvest the purest Grade-A jumbo seeds.
               </p>
             </div>
-            <div className="text-xs font-black text-[#1b4332] dark:text-[#52b788] flex items-center gap-1.5">
+            <div className="relative z-10 text-xs font-black text-[#52b788] flex items-center gap-1.5 drop-shadow-md">
               <span>Fair Trade &amp; Direct Sourcing</span>
               <Check className="w-4 h-4" />
             </div>
@@ -514,8 +526,21 @@ export default function HomePage() {
 
       {/* 6. COMBO VALUE PACKS PROMOTION BANNER */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl sm:rounded-[2.5rem] bg-[#1b4332] text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-[#2d6a4f]/60 shadow-2xl">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#52b788]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="rounded-3xl sm:rounded-[2.5rem] text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-[#2d6a4f]/60 shadow-2xl min-h-[400px] flex flex-col justify-center">
+          {/* Background Video */}
+          <div className="absolute inset-0 z-0 bg-[#000000]">
+            <video
+              src="/assets/videos/combo_gift_box.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover opacity-60 scale-[1.3] pointer-events-none"
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#1b4332]/95 via-[#1b4332]/80 to-[#1b4332]/30 z-0" />
+          
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#52b788]/20 rounded-full blur-3xl pointer-events-none z-0" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-7 space-y-6">
