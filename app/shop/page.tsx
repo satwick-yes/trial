@@ -81,12 +81,14 @@ function ShopContent() {
 
         {/* Hero Banner Header */}
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#1b4332] text-white p-8 sm:p-12 mb-10 shadow-xl border border-[#2d6a4f]/40">
-          <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-15 pointer-events-none hidden md:block">
-            <Image
-              src="/assets/banners/banner1.jpg"
-              alt="Gustosa Fox Nuts Banner"
-              fill
-              className="object-cover"
+          <div className="absolute inset-0 z-0 bg-[#000000]">
+            <video
+              src="/assets/videos/roasting.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover opacity-30 pointer-events-none"
             />
           </div>
           <div className="relative z-10 max-w-2xl space-y-4">
