@@ -199,16 +199,16 @@ export default function HomePage() {
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 dark:bg-[#112019]/90 backdrop-blur-md border border-white/60 dark:border-white/10 shadow-lg flex items-center justify-between">
                     <div>
                       <span className="text-[10px] font-black uppercase tracking-wider text-[#1b4332] dark:text-[#52b788] block">
-                        TOP RATED VALUE PACK
+                        THE PERFECT CRUNCH
                       </span>
                       <h4 className="text-xs sm:text-sm font-black text-[#0f241d] dark:text-[#e8f5e9]">
-                        Bihar Harvest (6 Flavour Set)
+                        Taste The Premium Difference
                       </h4>
                     </div>
                     <Link
-                      href="/combo-products"
+                      href="/shop"
                       className="bg-[#1b4332] dark:bg-[#52b788] text-white dark:text-[#081c15] p-2.5 rounded-xl hover:bg-[#2d6a4f] transition-all active:scale-95 shadow-sm"
-                      aria-label="Shop Combo"
+                      aria-label="Shop Now"
                     >
                       <ShoppingBag className="w-4 h-4" />
                     </Link>
